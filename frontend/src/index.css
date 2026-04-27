@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  color: #f4f4f5;
+}
+
+.card { @apply rounded-xl border border-zinc-800 bg-zinc-900 p-4 shadow-xl shadow-black/20; }
