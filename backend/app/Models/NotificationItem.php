@@ -1,0 +1,27 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
+class NotificationItem extends Model
+{
+    use HasFactory;
+
+    protected $table = 'notifications';
+
+    protected $fillable = [
+        'business_id', 'user_id', 'title', 'body', 'type', 'is_read',
+    ];
+
+    protected $casts = [
+        'is_read' => 'boolean',
+    ];
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+}
