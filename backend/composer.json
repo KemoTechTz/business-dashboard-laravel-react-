@@ -2,7 +2,7 @@
   "name": "kemotech/business-dashboard",
   "type": "project",
   "description": "Kemo Business Dashboard backend API",
-  "keywords": ["laravel", "saas", "dashboard"],
+  "keywords": ["laravel", "saas"],
   "license": "MIT",
   "require": {
     "php": "^8.2",
@@ -29,16 +29,6 @@
   "scripts": {
     "post-autoload-dump": [
       "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump"
-    ],
-    "post-update-cmd": [
-      "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
-    ],
-    "post-root-package-install": [
-      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-    ],
-    "post-create-project-cmd": [
-      "@php artisan key:generate --ansi",
-      "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\""
     ]
   },
   "config": {
